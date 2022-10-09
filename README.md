@@ -70,3 +70,22 @@ Data converted to two-dimensional space.
 
 ***fig: figure***  
 Scatter plots obtained.
+
+## Dependency Library
+
+- numpy
+- scipy
+- pandas
+- matplotlib
+- random
+- scikit-learn
+ - if you use KSG estimator as a measure of dependence
+- hyppo
+ - if you use HSIC as a measure of dependence
+ - you can download from [here](https://pypi.org/project/hyppo/)
+- minepy
+ - if you use MIC, TIC, MICe, or TICe as a measure of dependence
+ - you can download from [here](https://minepy.readthedocs.io/en/latest/)
+- dcor
+ - if you use dCor as a measure of dependence
+ - you can download from [here](https://pypi.org/project/dcor/)
