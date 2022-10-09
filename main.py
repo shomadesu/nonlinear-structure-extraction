@@ -2,10 +2,6 @@ import numpy as np
 import scipy as sp
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
-import warnings
-import math
-import itertools
 import random
 
 #KSG Estimator
@@ -16,10 +12,6 @@ from hyppo.independence import Hsic
 from minepy import MINE
 #Distance Correlation
 import dcor
-
-warnings.simplefilter('ignore')
-sns.set()
-plt.style.use('seaborn-whitegrid')
 
 class structure_extraction():
     def __init__(self,data,measure='ksg',opt_method='powell',repeat_num=10,aug_threshold=1e-2):
