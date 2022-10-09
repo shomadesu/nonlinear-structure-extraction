@@ -8,7 +8,6 @@ This method transforms multivariate data into 2-dimensional data, and extracts l
 ## Usage
 
 ~~~
-
 #define target data
 #quadratic structure with noise
 x= np.linspace(-1/2,1/2,100)
