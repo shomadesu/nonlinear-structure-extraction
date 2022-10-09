@@ -10,7 +10,7 @@ This method transforms multivariate data into 2-dimensional data, and extracts l
 ~~~
 
 #define target data
-
+#quadratic structure with noise
 x= np.linspace(-1/2,1/2,100)
 y = x**2
 z = np.array([random.uniform(0, 1) for i in range(0,100)])
@@ -39,28 +39,28 @@ structure_extraction(data,measure='dcor',repeat_num=10).fig_plot()
  
  [100 rows x 2 columns],
  <Figure size 864x864 with 1 Axes>)
- 
- ![](https://user-images.githubusercontent.com/46952903/194744816-c7842e75-a391-4145-b665-887375b46321.png)
 ~~~
 
+ ![scatter plot obtained](https://user-images.githubusercontent.com/46952903/194744816-c7842e75-a391-4145-b665-887375b46321.png)
+
 ### Parameter
-**data: pandas.DataFrame format**
-Target data.
-**measure: {'pearson','kendall','spearman','dcor','ksg','mic','tic','mice','tice','hsic'}, default='ksg'**
-Measure of dependence which estimate linear and nonlinear relationship between 2 variables.
-**opt_method: {'powell','nelder-mead'}, default='powell'**
-Method for solving optimization problem.
-**repeat_num: int, default=10**
-Number of repeat for exploring projection direction. Optimization method may result in a local solution, so we change initial value and repeat procedure several time.
-**aug_threshold: float, default=1e-2**
-Threshold for terminating the procedure in augmented Lagrangian method.
+**data: pandas.DataFrame format**  
+Target data.  
+**measure: {'pearson','kendall','spearman','dcor','ksg','mic','tic','mice','tice','hsic'}, default='ksg'**  
+Measure of dependence which estimate linear and nonlinear relationship between 2 variables.  
+**opt_method: {'powell','nelder-mead'}, default='powell'**  
+Method for solving optimization problem.  
+**repeat_num: int, default=10**  
+Number of repeat for exploring projection direction. Optimization method may result in a local solution, so we change initial value and repeat procedure several time.  
+**aug_threshold: float, default=1e-2**  
+Threshold for terminating the procedure in augmented Lagrangian method.  
 
 ### Returns
-**alpha, beta: array**
-Projection direction such that linear or nonlinear structure appears.
-**dependence: float**
-Value indicated by measure of dependence.
-**proj: pandas.DataFrame**
-Data converted to two-dimensional space.
-**fig: figure**
+**alpha, beta: array**  
+Projection direction such that linear or nonlinear structure appears.  
+**dependence: float**  
+Value indicated by measure of dependence.  
+**proj: pandas.DataFrame**  
+Data converted to two-dimensional space.  
+**fig: figure**  
 Scatter plots obtained.
